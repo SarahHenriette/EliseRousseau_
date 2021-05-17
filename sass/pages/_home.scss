@@ -1,0 +1,30 @@
+.city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3F3F3;
+    padding: 10px 0;
+    &--icon {
+        margin-right: 1%;
+    }
+    &--text {
+        margin: none;
+        font-weight: 700;
+    }
+}
+
+.presentation {
+    background-color: #FAFAFA;
+    text-align: center;
+    padding: 30px 33px;
+    &--title {
+        font-size: 24px;
+        font-weight: 900;
+        margin: 0 0 15px 0;
+    }
+    &--text {
+        font-weight: 200;
+        margin: 0 0 28px 0;
+
+    }
+}
