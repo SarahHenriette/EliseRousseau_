@@ -4,6 +4,10 @@ p, h3, h4, .btn {
   font-family: "Roboto", sans-serif;
 }
 
+h2 {
+  font-family: "Shrikhand", cursive;
+}
+
 .btn--primary {
   border-radius: 50px;
   color: #FFF;
@@ -49,6 +53,27 @@ p, h3, h4, .btn {
 .header--logo {
   font-family: "Shrikhand", cursive;
   text-align: center;
+}
+
+.footer {
+  background-color: #353535;
+  color: #FFF;
+  padding: 30px 40px;
+}
+.footer--title {
+  margin-top: 0;
+}
+.footer--text {
+  font-weight: 700;
+  margin: 15px 0 0 0;
+}
+.footer--textPrimary i {
+  width: 20px;
+  margin-right: 15px;
+  text-align: center;
+}
+.footer--textSecondary {
+  font-weight: 100;
 }
 
 body {

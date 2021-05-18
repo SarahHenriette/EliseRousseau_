@@ -7,3 +7,7 @@ $textFont: 'Roboto', sans-serif;
 p, h3, h4, .btn {
     font-family: $textFont;
 }
+
+h2 {
+    font-family: $titleFont;
+}
