@@ -1,7 +1,16 @@
 .header {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &--logo {
         font-family: $titleFont;
         text-align: center;
+        font-weight: 100;
+        position: relative;
+    }
+    &--return {
+        position: absolute;
+        left: 31px;
     }
 }

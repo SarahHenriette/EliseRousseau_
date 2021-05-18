@@ -34,7 +34,7 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 25px;
     @include tablet-only {
         flex-direction: column;
     }
@@ -75,3 +75,75 @@
     }
 }
 
+.restaurants {
+    width: 100%;
+    height: auto;
+    background-color: #F3F3F3;
+    padding: 15px 0;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    &--title {
+        width: 90%;
+        text-align: left;
+        margin: 25px auto 25px auto;
+    }
+    &--restaurant {
+        display: block;
+        width: 40%;
+        height: 325px;
+        margin: auto;
+        background-color:#FFF;
+        border-radius: 20px;
+        box-shadow: 1px 4px 12px rgb(219, 218, 218);
+        margin-bottom: 40px;
+        @include mobile-only {
+            width: 90%;
+        }
+    }
+    &--restaurant_imagePaletteGout {
+        background: url('../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+    }
+    &--restaurant_imageNoteEnchantee {
+        background: url('../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+    }
+    &--restaurant_imageFrancaise {
+        background: url('../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+    }
+    &--restaurant_imageDeliceSens {
+        background: url('../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+
+    }
+    &--restaurant_image {
+        width: 100%;
+        height: 245px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 15px 15px 0 0;
+    }
+    &--restaurant_infos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        height: 80px;
+        margin: auto;
+    }
+    &--restaurant_infosText {
+        width: 70%;
+    }
+    &--restaurant_name {
+        font-size: 18px;
+    }
+    &--restaurant_city {
+        font-weight: 100;
+    }
+    &--restaurant_name, &--restaurant_city{
+        margin: 0;
+        line-height: 24px;
+    }
+    &--restaurant_like i {
+        // color: red;
+    }
+}
