@@ -1,9 +1,10 @@
-@import 'base/polices';
-@import 'utils/colors';
-@import 'components/button';
-@import 'pages/home';
-@import 'layouts/header';
-@import 'layouts/footer';
+@import 'base/_polices';
+@import 'utils/_colors';
+@import 'utils/_breakpoints';
+@import 'components/_button';
+@import 'pages/_home';
+@import 'layouts/_header';
+@import 'layouts/_footer';
 
 
 body {
