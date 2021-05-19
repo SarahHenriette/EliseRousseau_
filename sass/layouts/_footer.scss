@@ -5,17 +5,20 @@
     &--title {
         margin-top: 0;
         font-weight: 100;
+        margin-bottom: 15px;
     }
-    &--text {
-        font-weight: 700;
-        margin: 15px 0 0 0;
-    }
-    &--textPrimary i {
+    // &--text {
+    //     font-weight: 700;
+    //     margin: 0 0 15px 0;
+    // }
+    &--text_primary i {
       width: 20px;
+      font-weight: 700;
       margin-right: 15px;
       text-align: center;
     }
-    &--textSecondary {
+    &--text_secondary {
         font-weight: 100;
+        color: #FFF;
     }
 }

@@ -1,10 +1,17 @@
 @import 'base/_polices';
 @import 'utils/_colors';
 @import 'utils/_breakpoints';
+@import 'utils/_mixins';
+
 @import 'components/_button';
+@import 'components/heartAnimate';
+
 @import 'pages/_home';
+@import 'pages/_aLaFrancaise';
 @import 'layouts/_header';
 @import 'layouts/_footer';
+@import 'layouts/restaurantMenu';
+
 
 
 body {

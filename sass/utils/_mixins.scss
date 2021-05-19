@@ -1,0 +1,15 @@
+@mixin backgroundImage {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // @include mobile-only {
+    //     height: 276px;
+    //     background-size: contain;
+    // }
+}
+
+@mixin boxShadow { 
+    box-shadow: 1px 4px 12px $shadowGray;
+}

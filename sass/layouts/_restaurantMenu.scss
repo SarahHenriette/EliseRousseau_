@@ -1,0 +1,34 @@
+.card {
+    width: 100%;
+    background-color: $mediumGray;
+    border-radius:50px 50px 0 0;
+    height: 500px;
+    margin-top: -12%;
+    &--header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+    }
+    &--subtitle {
+        text-transform: uppercase;
+        font-weight: 400;
+        position: relative;
+    }
+    &--subtitle::before {
+        content: "";
+        width: 50px;
+        height: 3px;
+        background-color: $tertiary;
+        position: absolute;
+        bottom: -10px;
+    }
+    &--meal {
+        width: 90%;
+        height: 85px;
+        background-color: #FFF;
+        border-radius: 25px;
+        margin-bottom: 20px;
+        @include boxShadow;
+    }
+}

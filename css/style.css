@@ -24,13 +24,121 @@ a {
   border: none;
   box-shadow: 0px 2px 10px #979595;
 }
+.btn--primary:hover {
+  background: linear-gradient(#d968ba, #693e9d);
+}
 
+.like {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.like--empty {
+  color: #000;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+}
+.like--full {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  opacity: 0;
+}
+
+.like:hover .fas {
+  opacity: 1;
+  display: block;
+  color: #9356DC;
+  display: block;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.15);
+}
+.like:hover .far {
+  opacity: 0;
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #e4e4e4;
+  top: 0;
+  z-index: 700;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: display 5000ms;
+}
+.loader--circle {
+  width: 150px;
+  height: 150px;
+  background-color: #e4e4e4;
+  transform-origin: top;
+  animation: progress-bar ease-in-out 3000ms;
+  z-index: 702;
+}
+.loader--circleprogressbar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(#9356DC, #FF79DA);
+  position: absolute;
+  z-index: 701;
+}
+.loader--circleOutline {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  z-index: 703;
+  position: absolute;
+  border: 4px solid #FF79DA;
+}
+
+@keyframes circle-outline {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes progress-bar {
+  0% {
+    transform: scaleY(1);
+  }
+  18% {
+    transform: scaleY(0.7);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  72% {
+    transform: scaleY(0.2);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+@keyframes display {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .city {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F3F3F3;
-  padding: 10px 0;
+  background-color: #e4e4e4;
+  padding: 3px 0;
 }
 .city--icon {
   margin-right: 1%;
@@ -41,9 +149,9 @@ a {
 }
 
 .presentation {
-  background-color: #FAFAFA;
+  background-color: #F3F3F3;
   text-align: center;
-  padding: 30px 33px;
+  padding: 41px 51px 79px 51px;
 }
 .presentation--title {
   font-size: 24px;
@@ -52,7 +160,7 @@ a {
 }
 .presentation--text {
   font-weight: 200;
-  margin: 0 0 28px 0;
+  margin: 0 0 50px 0;
 }
 
 .features {
@@ -79,14 +187,21 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  box-shadow: 1px 4px 12px #dbdada;
+  box-shadow: 1px 4px 12px #b4b0b0;
   margin: 15px 0;
   position: relative;
+  transition: background-color 0.3s ease-in-out;
 }
 @media screen and (max-width: 1100px) {
   .features--feature {
     width: 85%;
   }
+}
+.features--feature:hover {
+  background-color: rgba(147, 86, 220, 0.3);
+}
+.features--feature:hover .features--feature_icon {
+  color: #9356DC;
 }
 .features--feature_number {
   background-color: #9356DC;
@@ -99,6 +214,7 @@ a {
 .features--feature_icon {
   color: grey;
   padding-right: 19px;
+  transition: color 0.3s ease-in-out;
 }
 .features--feature_text {
   font-weight: 700;
@@ -126,7 +242,7 @@ a {
   margin: auto;
   background-color: #FFF;
   border-radius: 20px;
-  box-shadow: 1px 4px 12px #dbdada;
+  box-shadow: 1px 4px 12px #b4b0b0;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 600px) {
@@ -177,37 +293,14 @@ a {
   margin: 0;
   line-height: 24px;
 }
-.restaurants--restaurant_like {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.restaurants--restaurant_like .fas {
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
-  position: absolute;
-  opacity: 0;
-}
-.restaurants--restaurant_like .far {
-  color: #000;
-  position: absolute;
-  transition: opacity 0.3s ease-in-out;
-}
-.restaurants--restaurant_like:hover .fas {
-  opacity: 1;
-  display: block;
-  color: #9356DC;
-  display: block;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transform: scale(1.15);
-}
-.restaurants--restaurant_like:hover .far {
-  opacity: 0;
+
+.background--image_aLaFrancaise {
+  background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header {
@@ -215,6 +308,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
 }
 .header--logo {
   font-family: "Shrikhand", cursive;
@@ -235,18 +330,52 @@ a {
 .footer--title {
   margin-top: 0;
   font-weight: 100;
+  margin-bottom: 15px;
 }
-.footer--text {
-  font-weight: 700;
-  margin: 15px 0 0 0;
-}
-.footer--textPrimary i {
+.footer--text_primary i {
   width: 20px;
+  font-weight: 700;
   margin-right: 15px;
   text-align: center;
 }
-.footer--textSecondary {
+.footer--text_secondary {
   font-weight: 100;
+  color: #FFF;
+}
+
+.card {
+  width: 100%;
+  background-color: #F3F3F3;
+  border-radius: 50px 50px 0 0;
+  height: 500px;
+  margin-top: -12%;
+}
+.card--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+.card--subtitle {
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+}
+.card--subtitle::before {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: -10px;
+}
+.card--meal {
+  width: 90%;
+  height: 85px;
+  background-color: #FFF;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  box-shadow: 1px 4px 12px #b4b0b0;
 }
 
 body {
