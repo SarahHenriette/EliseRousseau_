@@ -297,6 +297,7 @@ a {
   text-transform: uppercase;
   font-weight: 400;
   position: relative;
+  margin-bottom: 30px;
 }
 .card--subtitle::before {
   content: "";
@@ -312,7 +313,82 @@ a {
   background-color: #FFF;
   border-radius: 25px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #000;
+  overflow: hidden;
   box-shadow: 1px 4px 12px #b4b0b0;
+}
+.card--meal_infos {
+  width: 280px;
+  display: flex;
+  height: 50px;
+  margin-left: 20px;
+}
+.card--meal_text {
+  width: auto;
+  line-height: 25px;
+}
+.card--meal_textName {
+  font-weight: 700;
+  margin: 0;
+  text-overflow: ellipsis;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.card--meal_textSideDish {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.card--meal_price {
+  font-weight: 800;
+  display: flex;
+  height: 34px;
+  align-items: flex-end;
+}
+.card--meal_validate {
+  width: 70px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  border-radius: 0 25px 25px 0;
+  display: none;
+  transform: translateX(71px);
+  animation: 0.3s ease-in-out showValidation;
+  animation-direction: alternate-reverse;
+  background-color: #99E2D0;
+}
+.card--meal:hover .card--meal_infos, .card--meal:hover .card--meal_textName, .card--meal:hover .card--meal_textSideDish {
+  width: 245px;
+  animation: 0.3s ease-in-out reduceBlockSize;
+}
+.card--meal:hover .card--meal_validate {
+  transform: translateX(0px);
+  display: flex;
+  animation: 0.3s ease-in-out showValidation;
+}
+@keyframes showValidation {
+  0% {
+    transform: translateX(71px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes reduceBlockSize {
+  0% {
+    width: 280px;
+  }
+  100% {
+    width: 245px;
+  }
 }
 .card--btn {
   margin: 25px 0;

@@ -22,6 +22,7 @@
         text-transform: uppercase;
         font-weight: 400;
         position: relative;
+        margin-bottom: 30px;
     }
     &--subtitle::before {
         content: "";
@@ -37,7 +38,92 @@
         background-color: #FFF;
         border-radius: 25px;
         margin-bottom: 20px;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        position: relative;
+        color: #000;
+        overflow: hidden;
         @include boxShadow;
+        &_infos {
+            width: 280px;
+            display: flex;
+            height: 50px;
+            margin-left: 20px;
+            // background-color: red;
+        }
+        &_text {
+            width: auto;
+            line-height: 25px;
+            // background-color: purple;
+            
+        }
+        &_textName {
+            font-weight: 700;
+            margin: 0;
+            text-overflow: ellipsis;
+            width: 300px;
+            overflow: hidden;
+            white-space: nowrap;
+            // font-size: 18px;
+        }
+        &_textSideDish {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 300;
+            text-overflow: ellipsis;
+            width: 300px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        &_price {
+            font-weight: 800;
+            display: flex;
+            height: 34px;
+            align-items: flex-end;
+
+        }
+
+        &_validate {
+            width: 70px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            border-radius: 0 25px 25px 0;
+            display: none;
+            transform: translateX(71px);
+            animation: .3s ease-in-out showValidation;
+            animation-direction: alternate-reverse;
+            background-color: $tertiary;
+        }
+
+        &:hover {
+            .card--meal_infos, .card--meal_textName, .card--meal_textSideDish {
+                width: 245px;
+                animation: .3s ease-in-out reduceBlockSize;
+            }
+            .card--meal_validate {
+                transform: translateX(0px);
+                display: flex;
+                animation: .3s ease-in-out showValidation;
+            }
+        }
+        @keyframes showValidation {
+            0% { 
+                transform: translateX(71px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        @keyframes reduceBlockSize {
+            0% { 
+                width: 280px;
+            }
+            100% {
+                width: 245px;
+            }
+        }
     }
 
     &--btn {
