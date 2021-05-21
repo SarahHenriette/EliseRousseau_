@@ -198,6 +198,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 15px 15px 0 0;
+  position: relative;
 }
 .restaurants--restaurant_infos {
   display: flex;
@@ -221,6 +222,20 @@ a {
 .restaurants--restaurant_name, .restaurants--restaurant_city {
   margin: 0;
   line-height: 24px;
+}
+.restaurants--restaurant_new {
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #215521;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-weight: 600;
 }
 
 .background--image_aLaFrancaise {
@@ -276,6 +291,7 @@ a {
 .header--return {
   position: absolute;
   left: 31px;
+  color: #000;
 }
 
 .footer {
@@ -385,10 +401,20 @@ a {
   margin: -1rem -5rem -1rem 0rem;
   background-color: #99E2D0;
   animation: 0.3s ease-out showValidation2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card--meal_validate i {
+  color: #FFF;
 }
 .card--meal:hover .card--meal_validate {
   margin: 0 0 0 0;
-  animation: 0.3s ease-in-out showValidation normal;
+  animation: 0.3s ease-in-out showValidation;
+}
+.card--meal:hover .card--meal_validate i {
+  animation: 0.4s ease-out rotateIconConfirm;
+  animation-iteration-count: 1;
 }
 @keyframes showValidation {
   0% {
@@ -404,6 +430,14 @@ a {
   }
   100% {
     margin: -1rem -5rem -1rem 0rem;
+  }
+}
+@keyframes rotateIconConfirm {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
   }
 }
 .card--btn {

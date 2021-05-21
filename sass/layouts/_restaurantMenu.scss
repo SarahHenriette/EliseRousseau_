@@ -83,13 +83,23 @@
             margin: -1rem -5rem -1rem 0rem;
             background-color: $tertiary;
             animation: .3s ease-out showValidation2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & i {
+                color: #FFF;
+            }
         }
 
         &:hover {
             .card--meal_validate {
                 margin: 0 0 0 0;
-                animation: .3s ease-in-out showValidation normal;
+                animation: .3s ease-in-out showValidation;
+                & i {
+                    animation: .4s ease-out rotateIconConfirm;
+                    animation-iteration-count: 1;
 
+                }
             }
         }
         @keyframes showValidation {
@@ -106,6 +116,14 @@
             }
             100% {
                 margin: -1rem -5rem -1rem 0rem;
+            }
+        }
+        @keyframes rotateIconConfirm {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(180deg);
             }
         }
     }
