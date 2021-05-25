@@ -413,8 +413,8 @@ a {
   animation: 0.3s ease-in-out showValidation;
 }
 .card--meal:hover .card--meal_validate i {
-  animation: 0.4s ease-out rotateIconConfirm;
-  animation-iteration-count: 1;
+  animation: 0.2s ease-in-out rotateIconConfirm;
+  animation-iteration-count: 2;
 }
 @keyframes showValidation {
   0% {

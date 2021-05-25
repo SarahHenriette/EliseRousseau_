@@ -96,8 +96,8 @@
                 margin: 0 0 0 0;
                 animation: .3s ease-in-out showValidation;
                 & i {
-                    animation: .4s ease-out rotateIconConfirm;
-                    animation-iteration-count: 1;
+                    animation: .2s ease-in-out rotateIconConfirm;
+                    animation-iteration-count: 2;
 
                 }
             }
