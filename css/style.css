@@ -509,9 +509,9 @@ a {
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #e4e4e4;
   top: 0;
   z-index: -10;
