@@ -361,7 +361,52 @@ a {
   position: relative;
   color: #000;
   overflow: hidden;
+  opacity: 1;
   box-shadow: 1px 4px 12px #b4b0b0;
+}
+.card--meal_0 {
+  animation: 500ms ease-in-out test, 0ms ease-in-out test2;
+  animation-delay: 0ms, 0ms;
+}
+.card--meal_1 {
+  animation: 500ms ease-in-out test, 100ms ease-in-out test2;
+  animation-delay: 100ms, 0ms;
+}
+.card--meal_2 {
+  animation: 500ms ease-in-out test, 200ms ease-in-out test2;
+  animation-delay: 200ms, 0ms;
+}
+.card--meal_3 {
+  animation: 500ms ease-in-out test, 300ms ease-in-out test2;
+  animation-delay: 300ms, 0ms;
+}
+.card--meal_4 {
+  animation: 500ms ease-in-out test, 400ms ease-in-out test2;
+  animation-delay: 400ms, 0ms;
+}
+.card--meal_5 {
+  animation: 500ms ease-in-out test, 500ms ease-in-out test2;
+  animation-delay: 500ms, 0ms;
+}
+.card--meal_6 {
+  animation: 500ms ease-in-out test, 600ms ease-in-out test2;
+  animation-delay: 600ms, 0ms;
+}
+.card--meal_7 {
+  animation: 500ms ease-in-out test, 700ms ease-in-out test2;
+  animation-delay: 700ms, 0ms;
+}
+.card--meal_8 {
+  animation: 500ms ease-in-out test, 800ms ease-in-out test2;
+  animation-delay: 800ms, 0ms;
+}
+.card--meal_9 {
+  animation: 500ms ease-in-out test, 900ms ease-in-out test2;
+  animation-delay: 900ms, 0ms;
+}
+.card--meal_10 {
+  animation: 500ms ease-in-out test, 1000ms ease-in-out test2;
+  animation-delay: 1000ms, 0ms;
 }
 .card--meal_text {
   margin-left: 20px;
@@ -438,6 +483,24 @@ a {
   }
   100% {
     transform: rotate(180deg);
+  }
+}
+@keyframes test {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes test2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 .card--btn {

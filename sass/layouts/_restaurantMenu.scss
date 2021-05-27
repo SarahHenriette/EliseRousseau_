@@ -1,3 +1,7 @@
+$num-bars: 10;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-bars;
+
 .card {
     width: 100%;
     background-color: $mediumGray;
@@ -42,8 +46,15 @@
         align-items: center;
         position: relative;
         color: #000;
-        overflow: hidden;
+        overflow: hidden;  
+        opacity: 1;
         @include boxShadow;
+        @for $i from 0 through $num-bars {
+            &_#{$i} {
+                animation: 500ms ease-in-out test,$anim-delay * $i ease-in-out test2;
+                animation-delay: $anim-delay * $i, 0ms;
+            }
+        }
         &_text {
             margin-left: 20px;
             line-height: 25px;
@@ -76,7 +87,6 @@
             align-items: flex-end;
             margin-right: 25px;
         }
-
         &_validate {
             width: 80px;
             height: 100%;
@@ -124,6 +134,24 @@
             }
             100% {
                 transform: rotate(180deg);
+            }
+        }
+        @keyframes test {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes test2 {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
             }
         }
     }
