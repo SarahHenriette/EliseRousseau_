@@ -179,18 +179,6 @@ a {
     width: 90%;
   }
 }
-.restaurants--restaurant_imagePaletteGout {
-  background: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-.restaurants--restaurant_imageNoteEnchantee {
-  background: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-}
-.restaurants--restaurant_imageFrancaise {
-  background: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-}
-.restaurants--restaurant_imageDeliceSens {
-  background: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-}
 .restaurants--restaurant_image {
   width: 100%;
   height: 245px;
@@ -199,6 +187,10 @@ a {
   background-position: center;
   border-radius: 15px 15px 0 0;
   position: relative;
+  overflow: hidden;
+}
+.restaurants--restaurant_image img {
+  width: 100%;
 }
 .restaurants--restaurant_infos {
   display: flex;
