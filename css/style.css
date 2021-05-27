@@ -73,7 +73,7 @@ a {
   margin-right: 1%;
 }
 .city--text {
-  margin: none;
+  margin: 0;
   font-weight: 700;
   font-size: 14px;
 }
