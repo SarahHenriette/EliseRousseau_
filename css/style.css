@@ -356,6 +356,7 @@ a {
   color: #000;
   overflow: hidden;
   opacity: 1;
+  cursor: pointer;
   box-shadow: 1px 4px 12px #b4b0b0;
 }
 .card--meal_0 {

@@ -48,6 +48,7 @@ $anim-delay: $anim-dur / $num-bars;
         color: #000;
         overflow: hidden;  
         opacity: 1;
+        cursor: pointer;
         @include boxShadow;
         @for $i from 0 through $num-bars {
             &_#{$i} {
