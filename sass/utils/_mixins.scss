@@ -4,10 +4,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    // @include mobile-only {
-    //     height: 276px;
-    //     background-size: contain;
-    // }
 }
 
 @mixin boxShadow { 
