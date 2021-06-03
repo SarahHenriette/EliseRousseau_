@@ -361,47 +361,47 @@ a {
   box-shadow: 1px 4px 12px #b4b0b0;
 }
 .card--meal_0 {
-  animation: 500ms ease-in-out test, 0ms ease-in-out test2;
+  animation: 500ms ease-in-out displayMeal, 0ms ease-in-out opacity0;
   animation-delay: 0ms, 0ms;
 }
 .card--meal_1 {
-  animation: 500ms ease-in-out test, 100ms ease-in-out test2;
+  animation: 500ms ease-in-out displayMeal, 100ms ease-in-out opacity0;
   animation-delay: 100ms, 0ms;
 }
 .card--meal_2 {
-  animation: 500ms ease-in-out test, 200ms ease-in-out test2;
+  animation: 500ms ease-in-out displayMeal, 200ms ease-in-out opacity0;
   animation-delay: 200ms, 0ms;
 }
 .card--meal_3 {
-  animation: 500ms ease-in-out test, 300ms ease-in-out test2;
+  animation: 500ms ease-in-out displayMeal, 300ms ease-in-out opacity0;
   animation-delay: 300ms, 0ms;
 }
 .card--meal_4 {
-  animation: 500ms ease-in-out test, 400ms ease-in-out test2;
+  animation: 500ms ease-in-out displayMeal, 400ms ease-in-out opacity0;
   animation-delay: 400ms, 0ms;
 }
 .card--meal_5 {
-  animation: 500ms ease-in-out test, 500ms ease-in-out test2;
+  animation: 500ms ease-in-out displayMeal, 500ms ease-in-out opacity0;
   animation-delay: 500ms, 0ms;
 }
 .card--meal_6 {
-  animation: 500ms ease-in-out test, 600ms ease-in-out test2;
+  animation: 500ms ease-in-out displayMeal, 600ms ease-in-out opacity0;
   animation-delay: 600ms, 0ms;
 }
 .card--meal_7 {
-  animation: 500ms ease-in-out test, 700ms ease-in-out test2;
+  animation: 500ms ease-in-out displayMeal, 700ms ease-in-out opacity0;
   animation-delay: 700ms, 0ms;
 }
 .card--meal_8 {
-  animation: 500ms ease-in-out test, 800ms ease-in-out test2;
+  animation: 500ms ease-in-out displayMeal, 800ms ease-in-out opacity0;
   animation-delay: 800ms, 0ms;
 }
 .card--meal_9 {
-  animation: 500ms ease-in-out test, 900ms ease-in-out test2;
+  animation: 500ms ease-in-out displayMeal, 900ms ease-in-out opacity0;
   animation-delay: 900ms, 0ms;
 }
 .card--meal_10 {
-  animation: 500ms ease-in-out test, 1000ms ease-in-out test2;
+  animation: 500ms ease-in-out displayMeal, 1000ms ease-in-out opacity0;
   animation-delay: 1000ms, 0ms;
 }
 .card--meal_text {
@@ -439,9 +439,9 @@ a {
 .card--meal_validate {
   width: 80px;
   height: 100%;
-  margin: -1rem -5rem -1rem 0rem;
+  margin: 0rem -5rem 0rem 0rem;
   background-color: #99E2D0;
-  animation: 0.3s ease-out showValidation2;
+  transition: margin 0.3s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -451,27 +451,10 @@ a {
 }
 .card--meal:hover .card--meal_validate {
   margin: 0 0 0 0;
-  animation: 0.3s ease-in-out showValidation;
 }
 .card--meal:hover .card--meal_validate i {
   animation: 0.2s ease-in-out rotateIconConfirm;
   animation-iteration-count: 2;
-}
-@keyframes showValidation {
-  0% {
-    margin: -1rem -5rem -1rem 0rem;
-  }
-  100% {
-    margin: 0 0 0 0;
-  }
-}
-@keyframes showValidation2 {
-  0% {
-    margin: 0 0 0 0;
-  }
-  100% {
-    margin: -1rem -5rem -1rem 0rem;
-  }
 }
 @keyframes rotateIconConfirm {
   0% {
@@ -481,7 +464,7 @@ a {
     transform: rotate(180deg);
   }
 }
-@keyframes test {
+@keyframes displayMeal {
   0% {
     transform: translateY(20px);
     opacity: 0;
@@ -491,7 +474,7 @@ a {
     opacity: 1;
   }
 }
-@keyframes test2 {
+@keyframes opacity0 {
   0% {
     opacity: 0;
   }
@@ -510,12 +493,12 @@ a {
   height: 100%;
   background-color: #e4e4e4;
   top: 0;
-  z-index: -10;
-  opacity: 0;
+  z-index: 700;
+  opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: 3000ms ease-in-out display;
+  animation: 3000ms ease-in-out displayLoader;
 }
 .loader--square {
   width: 150px;
@@ -532,6 +515,8 @@ a {
   background: linear-gradient(#9356DC, #FF79DA);
   position: absolute;
   z-index: 701;
+  transform: rotate(0);
+  animation: 5000ms ease-in-out circle-rotate;
 }
 .loader--circleOutline {
   width: 165px;
@@ -542,7 +527,7 @@ a {
   border: 6px solid #FF79DA;
 }
 
-@keyframes circle-outline {
+@keyframes circle-rotate {
   0% {
     transform: rotate(0);
   }
@@ -567,7 +552,7 @@ a {
     transform: scaleY(0);
   }
 }
-@keyframes display {
+@keyframes displayLoader {
   0% {
     z-index: 700;
     opacity: 1;

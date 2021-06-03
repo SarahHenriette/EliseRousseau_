@@ -4,12 +4,12 @@
     height: 100%;
     background-color: $darkGray;
     top: 0;
-    z-index:-10;
-    opacity: 0;
+    z-index:700;
+    opacity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: 3000ms ease-in-out display;
+    animation: 3000ms ease-in-out displayLoader;
     &--square {
         width: 150px;
         height: 150px;
@@ -25,6 +25,8 @@
         background: linear-gradient($primary, $secondary);
         position: absolute;
         z-index: 701;
+        transform: rotate(0);
+        animation: 5000ms ease-in-out  circle-rotate ;
     }
     &--circleOutline {
         width: 165px;
@@ -35,7 +37,7 @@
         border: 6px solid $secondary;
     }
 }
-@keyframes circle-outline {
+@keyframes circle-rotate {
     0% {
         transform: rotate(0);
     }
@@ -64,7 +66,7 @@
     }
 }
 
-@keyframes display {
+@keyframes displayLoader {
     0% {
         z-index: 700;
         opacity: 1;

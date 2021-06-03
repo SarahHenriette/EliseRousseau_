@@ -52,7 +52,7 @@ $anim-delay: $anim-dur / $num-bars;
         @include boxShadow;
         @for $i from 0 through $num-bars {
             &_#{$i} {
-                animation: 500ms ease-in-out test,$anim-delay * $i ease-in-out test2;
+                animation: 500ms ease-in-out displayMeal,$anim-delay * $i ease-in-out opacity0;
                 animation-delay: $anim-delay * $i, 0ms;
             }
         }
@@ -91,9 +91,9 @@ $anim-delay: $anim-dur / $num-bars;
         &_validate {
             width: 80px;
             height: 100%;
-            margin: -1rem -5rem -1rem 0rem;
+            margin: 0rem -5rem 0rem 0rem;
             background-color: $tertiary;
-            animation: .3s ease-out showValidation2;
+            transition: margin .3s ease-in-out;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -105,28 +105,11 @@ $anim-delay: $anim-dur / $num-bars;
         &:hover {
             .card--meal_validate {
                 margin: 0 0 0 0;
-                animation: .3s ease-in-out showValidation;
                 & i {
                     animation: .2s ease-in-out rotateIconConfirm;
                     animation-iteration-count: 2;
 
                 }
-            }
-        }
-        @keyframes showValidation {
-            0% { 
-                margin: -1rem -5rem -1rem 0rem;
-            }
-            100% {
-                margin: 0 0 0 0;
-            }
-        }
-        @keyframes showValidation2 {
-            0% { 
-                margin: 0 0 0 0;
-            }
-            100% {
-                margin: -1rem -5rem -1rem 0rem;
             }
         }
         @keyframes rotateIconConfirm {
@@ -137,7 +120,7 @@ $anim-delay: $anim-dur / $num-bars;
                 transform: rotate(180deg);
             }
         }
-        @keyframes test {
+        @keyframes displayMeal {
             0% {
                 transform: translateY(20px);
                 opacity: 0;
@@ -147,7 +130,7 @@ $anim-delay: $anim-dur / $num-bars;
                 opacity: 1;
             }
         }
-        @keyframes test2 {
+        @keyframes opacity0 {
             0% {
                 opacity: 0;
             }
