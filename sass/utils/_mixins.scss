@@ -1,5 +1,6 @@
 @mixin backgroundImage {
     width: 100%;
+    height: auto;
     height: 400px;
     background-size: cover;
     background-repeat: no-repeat;

@@ -13,8 +13,8 @@
     }
     &--full {
         transform: scale(1);
-        transition: transform .3s ease-in-out;
-        position: absolute;
+        transition: transform .3s ease-in-out;   
+        position: absolute;                                                    
         opacity: 0;
     }
 }

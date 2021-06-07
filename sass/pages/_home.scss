@@ -110,6 +110,9 @@
         border-radius: 20px;
         box-shadow: 1px 4px 12px $shadowGray;
         margin-bottom: 40px;
+        @include tablet-only {
+            height: 265px;
+        }
         @include mobile-only {
             width: 90%;
         }
@@ -123,6 +126,9 @@
         border-radius: 15px 15px 0 0;
         position: relative;
         overflow: hidden;
+        @include tablet-only {
+            height: 185px;
+        }
     }
     &--restaurant_image img {
         width: 100%;
