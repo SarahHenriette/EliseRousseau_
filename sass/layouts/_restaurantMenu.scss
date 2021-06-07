@@ -115,7 +115,7 @@ $anim-delay: $anim-dur / $num-bars;
                 transform: rotate(0);
             }
             100% {
-                transform: rotate(180deg);
+                transform: rotate(360deg);
             }
         }
         @keyframes displayMeal {
