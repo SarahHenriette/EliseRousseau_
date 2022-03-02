@@ -14,4 +14,4 @@ Le but de ce projet a été d'intégrer une maquette en HTML et CSS et de dynami
 - convention de nommage BEM 
 
 # Démo :
-https://elise-rousseau-2-29042021.vercel.app/
+https://elise-rousseau-3-14052021.vercel.app/
